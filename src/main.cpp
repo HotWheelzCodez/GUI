@@ -27,10 +27,12 @@ int main(void)
 
   // Setup GUI styles here
   // ---------------------------
+  GUI::ButtonStyle style = { 0 };
   
 
   // Initalizie GUI components here
   // ----------------------------------
+  GUI::Button button({0, 0, 100, 100}, style, "button");
 
   while (!WindowShouldClose())
   {
@@ -44,6 +46,7 @@ int main(void)
 
     // Update and render GUI components here
     // -----------------------------------------
+    button.UpdateAndRender(mouseState);
 
     EndDrawing();
   }
